@@ -1,0 +1,16 @@
+<% include ./partials/header.ejs %>
+<div class="container-fluid text-center">
+<form action="/payment" method="POST" align="center">
+<p><h1> Offine Payment </h1></p>
+<div id="frr">
+<div class="form-group">
+<label for="parking-id">Enter parking Id:</label>
+<input type="text" name="parking_id" placeholder="User Parking Id" class="form-control">
+</div>
+
+<input type="submit" value="Submit!" class="btn btn-primary">
+</div>
+</form>
+</div>
+
+<% include ./partials/footer.ejs %>

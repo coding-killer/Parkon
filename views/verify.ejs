@@ -1,0 +1,18 @@
+<% include ./partials/header.ejs %>
+	<form action="/verify" method="POST" align="center">
+			<p><h1>Parking Space verification</h1></p>
+			<div id="frr">
+					<div class="form-group">
+							<label for="username">Parking Id</label>
+							<input type="text" name="parking_id" placeholder="Enter parking Id" id="id" class="form-control">
+					</div>
+				<button type="button" class="btn btn-primary">Submit</button>
+			</div>
+	</form>
+<% include ./partials/footer.ejs %>
+<% include ./partials/verifyError.ejs %>
+<script>
+    if(error){
+     $("#myModal").modal('show');
+    }   
+</script>

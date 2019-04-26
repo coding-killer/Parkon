@@ -1,0 +1,113 @@
+<% include ./partials/header.ejs %>
+
+<div class="container">
+<div class="container">
+<div class="row text-center" style="display:flex;flex-wrap:wrap;">
+ 
+<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+<div class="thumbnail">
+<img src="/img/unavailable.png">
+<div class="caption">
+<h4><b>MICRO</b></h4>
+</div>
+<p>
+  <% if(park.slot1){ %>
+  <a href="/verify" class="btn btn-primary">VERIFY</a>
+  <% }else{ %>
+  <a href="#" class="btn btn-danger">VERIFY</a>
+  <% } %>
+</p>
+</div>
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+<div class="thumbnail">
+<img src="/img/unavailable.png">
+<div class="caption">
+<h4><b>MICRO</b></h4>
+</div>
+<p>
+  <% if(park.slot2){ %>
+    <a href="/verify" class="btn btn-primary">VERIFY</a>
+    <% }else{ %>
+    <a href="#" class="btn btn-danger">VERIFY</a>
+    <% } %>
+</p>
+</div>
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+<div class="thumbnail">
+<img src="/img/unavailable.png">
+<div class="caption">
+<h4><b>MINI</b></h4>
+</div>
+<p>
+  <% if(park.slot3){ %>
+    <a href="/verify" class="btn btn-primary">VERIFY</a>
+    <% }else{ %>
+    <a href="#" class="btn btn-danger">VERIFY</a>
+    <% } %>
+</p>
+</div>
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+<div class="thumbnail">
+<img src="/img/unavailable.png">
+<div class="caption">
+<h4><b>MINI</b></h4>
+</div>
+<p>
+  <% if(park.slot4){ %>
+    <a href="/verify" class="btn btn-primary">VERIFY</a>
+    <% }else{ %>
+    <a href="#" class="btn btn-danger">VERIFY</a>
+    <% } %>
+</p>
+</div>
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+<div class="thumbnail">
+<img src="/img/unavailable.png">
+<div class="caption">
+<h4><b>LARGE</b></h4>
+</div>
+<p>
+  <% if(park.slot5){ %>
+    <a href="/verify" class="btn btn-primary">VERIFY</a>
+    <% }else{ %>
+    <a href="#" class="btn btn-danger">VERIFY</a>
+    <% } %>
+</p>
+</div>
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+<div class="thumbnail">
+<img src="/img/unavailable.png">
+<div class="caption">
+<h4><b>LARGE</b></h4>
+</div>
+<p>
+  <% if(park.slot6){ %>
+    <a href="/verify" class="btn btn-primary">VERIFY</a>
+    <% }else{ %>
+    <a href="#" class="btn btn-danger">VERIFY</a>
+    <% } %>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<% include ./partials/footer.ejs %>
+
+ 
+

@@ -1,0 +1,98 @@
+<% include ./partials/header.ejs %>
+
+<div class="container">
+<div class="container">
+<div class="row text-center" style="display:flex;flex-wrap:wrap;">
+ 
+<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+<div class="thumbnail">
+  <% if(park.slot1){ %>
+  <img src="/img/available.png">
+  <% }else{ %>
+<img src="/img/unavailable.png">
+<% } %>
+<div class="caption">
+<h4><b>MICRO</b></h4>
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+<div class="thumbnail">
+<% if(park.slot2){ %>
+  <img src="/img/available.png">
+  <% }else{ %>
+<img src="/img/unavailable.png">
+<% } %>
+<div class="caption">
+<h4><b>MICRO</b></h4>
+</div>
+
+</div>
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+<div class="thumbnail">
+<% if(park.slot3){ %>
+  <img src="/img/available.png">
+  <% }else{ %>
+<img src="/img/unavailable.png">
+<% } %>
+<div class="caption">
+<h4><b>MINI</b></h4>
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+<div class="thumbnail">
+<% if(park.slot4){ %>
+  <img src="/img/available.png">
+  <% }else{ %>
+<img src="/img/unavailable.png">
+<% } %>
+<div class="caption">
+<h4><b>MINI</b></h4>
+</div>
+</div>
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+<div class="thumbnail">
+<% if(park.slot5){ %>
+  <img src="/img/available.png">
+  <% }else{ %>
+<img src="/img/unavailable.png">
+<% } %>
+<div class="caption">
+<h4><b>LARGE</b></h4>
+</div>
+</div>
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+<div class="thumbnail">
+<% if(park.slot6){ %>
+  <img src="/img/available.png">
+  <% }else{ %>
+<img src="/img/unavailable.png">
+<% } %>
+<div class="caption">
+<h4><b>LARGE</b></h4>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<% include ./partials/footer.ejs %>
+
+ 
+

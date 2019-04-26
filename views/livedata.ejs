@@ -1,0 +1,227 @@
+<style>
+    .panel-header-height {
+    min-height: 60px;
+    max-height: 60px;
+    /* overflow-y: scroll; */
+}
+.panel-body {
+border: 2px solid lightgrey;
+}
+</style>
+<% include ./partials/header.ejs %>
+<div class="container" style="margin-top:20px">
+    <div class="panel">
+        <div class="container">
+            <div class="row">
+                <div class="container">
+                    <div class="panel text-center text-white">
+                        <div class="car-header panel-header-height pt-3 color">
+                            MICRO SPACE
+                        </div>
+                        <div class="panel-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="/img/car1.jpg" id="nocar1" width="40%">
+                                        <img src="/img/car.png" id="car1" width="40%">
+                                        <img src="/img/tick.png" width="20%" id="tick1">
+                                        <img src="/img/cross.png" width="20%" id="cross1">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="/img/car1.jpg" id="nocar2" width="40%">
+                                        <img src="/img/car.png" id="car2" width="40%">
+                                        <img src="/img/tick.png" width="20%" id="tick2">
+                                        <img src="/img/cross.png" width="20%" id="cross2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="container">
+                    <div class="panel text-center text-white">
+                        <div class="car-header panel-header-height pt-3 color">
+                            MINI SPACE
+                        </div>
+                        <div class="panel-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="/img/car1.jpg" id="nocar3" width="40%">
+                                        <img src="/img/car.png" id="car3" width="40%">
+                                        <img src="/img/tick.png" width="20%" id="tick3">
+                                        <img src="/img/cross.png" width="20%" id="cross3">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="/img/car1.jpg" id="nocar4" width="40%">
+                                        <img src="/img/car.png" id="car4" width="40%">
+                                        <img src="/img/tick.png" width="20%" id="tick4">
+                                        <img src="/img/cross.png" width="20%" id="cross4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="container">
+                    <div class="panel text-center text-white">
+                        <div class="car-header panel-header-height pt-3 color">
+                            LARGE SPACE
+                        </div>
+                        <div class="panel-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="/img/car1.jpg" id="nocar5" width="40%">
+                                        <img src="/img/car.png" id="car5" width="40%">
+                                        <img src="/img/tick.png" width="20%" id="tick5">
+                                        <img src="/img/cross.png" width="20%" id="cross5">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="/img/car1.jpg" id="nocar6" width="40%">
+                                        <img src="/img/car.png" id="car6" width="40%">
+                                        <img src="/img/tick.png" width="20%" id="tick6">
+                                        <img src="/img/cross.png" width="20%" id="cross6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>    
+</div>
+
+<% include ./partials/footer.ejs %>
+
+<script>
+    setInterval(function() {
+    // Call a function repetatively with 1 Second interval
+    getData();
+}, 1000); //1000mSeconds update rate
+      function getData(){  
+        $.get('http://192.168.1.5:3000/api/mqtt/entry').then(entry =>{
+            //console.log(data.park.sensor1);
+            $.get('http://192.168.1.5:3000/api/mqtt/live').then(data =>{
+            //console.log(data.park.sensor1);
+            if(entry.slot1 == true){
+                $('#car1').show(200);
+                $('#nocar1').hide(200);
+                if(data.sensor1 == true){
+                  $('#tick1').show(200);
+                  $('#cross1').hide(200);
+              }
+              else{
+                  $('#tick1').hide(200);
+                  $('#cross1').show(200);
+              }
+            }
+            else{
+                $('#car1').hide(200);
+                $('#nocar1').show(200);
+                $('#tick1').hide(200);
+                $('#cross1').hide(200); 
+            }
+            if(entry.slot2 == true){
+                $('#car2').show(200);
+                $('#nocar2').hide(200);
+                if(data.park.sensor2 == true){
+                  $('#tick2').show(200);
+                  $('#cross2').hide(200);
+              }
+              else{
+                  $('#tick2').hide(200);
+                  $('#cross2').show(200);
+              }
+            }
+            else{
+                $('#car2').hide(200);
+                $('#nocar2').show(200);
+                $('#tick2').hide(200);
+                $('#cross2').hide(200);
+            }
+            if(entry.slot3 == true){
+                $('#car3').show(200);
+                $('#nocar3').hide(200);
+                if(data.park.sensor3 == true){
+                  $('#tick3').show(200);
+                  $('#cross3').hide(200);
+              }
+              else{
+                  $('#tick3').hide(200);
+                  $('#cross3').show(200);
+              }
+            }
+            else{
+                $('#car3').hide(200);
+                $('#nocar3').show(200);
+                $('#tick3').hide(200);
+                $('#cross3').hide(200);
+            }
+
+            if(entry.slot4 == true){
+                $('#car4').show(200);
+                $('#nocar4').hide(200);
+                if(data.park.sensor4 == true){
+                  $('#tick4').show(200);
+                  $('#cross4').hide(200);
+              }
+              else{
+                  $('#tick4').hide(200);
+                  $('#cross4').show(200);
+              }
+            }
+            else{
+                $('#car4').hide(200);
+                $('#nocar4').show(200);
+                $('#tick4').hide(200);
+                $('#cross4').hide(200);
+            }
+            if(entry.slot5 == true){
+                $('#car5').show(200);
+                $('#nocar5').hide(200);
+                if(data.park.sensor5 == true){
+                  $('#tick5').show(200);
+                  $('#cross5').hide(200);
+              }
+              else{
+                  $('#tick5').hide(200);
+                  $('#cross5').show(200);
+              }
+            }
+            else{
+                $('#car5').hide(200);
+                $('#nocar5').show(200);
+                $('#tick5').hide(200);
+                $('#cross5').hide(200);
+            }  
+            if(entry.slot6 == true){
+                $('#car6').show(200);
+                $('#nocar6').hide(200);
+                if(data.park.sensor6 == true){
+                  $('#tick6').show(200);
+                  $('#cross6').hide(200);
+              }
+              else{
+                  $('#tick6').hide(200);
+                  $('#cross6').show(200);
+              }  
+            }
+            else{
+                $('#car6').hide(200);
+                $('#nocar6').show(200);
+                $('#tick6').hide(200);
+                $('#cross6').hide(200);
+            }
+            
+        })
+      })
+    }
+</script>
+ 
+

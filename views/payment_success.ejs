@@ -1,0 +1,25 @@
+<% include ./partials/header.ejs %>
+<div class="container-fluid bg-3 text-center"> 
+<p><h1> Payment Summary </h1></p>
+<div class="container-fluid bg-3 text-center">
+   <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Entry Time</th>
+        <th>Exit Time</th>
+        <th>Duration</th>
+        <th>Payment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= entry %></td>
+        <td><%= exit %></td>
+        <td><%= duration %></td>
+        <td>Rs <%= payment %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<% include ./partials/footer.ejs %>
