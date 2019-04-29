@@ -231,7 +231,7 @@ if __name__ == '__main__':
                 x = processPic(num)
                 carnum = x[0]
                 model= x[1]
-                url = "https://raw.githubusercontent.com/coding-killer/instascan-js/master/car.csv"
+                url = "https://raw.githubusercontent.com/jigneshk5/Parkon/master/car.csv"
                 df = pd.read_csv(url)
                 #df = pd.read_csv('car.csv')
                 for index, row in df.iterrows():
