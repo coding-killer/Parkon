@@ -138,11 +138,11 @@ def displaySlot(slot):
     with canvas(device) as draw:
         font1 = ImageFont.truetype('/home/pi/luma.examples/examples/fonts/Volter__28Goldfish_29.ttf',20)
         font2 = ImageFont.truetype('/home/pi/luma.examples/examples/fonts/ChiKareGo.ttf',18)
-        if(slot==1 || slot==2):
+        if(slot==1 or slot==2):
             category="MICRO"
-        if(slot==3 || slot==4):
+        if(slot==3 or slot==4):
             category="MINI"
-        if(slot==5 || slot==6):
+        if(slot==5 or slot==6):
             category="LARGE"
         draw.text((20, 0), category,font=font1,fill="white")
         draw.text((25, 40), "SLOT: "+str(slot),font=font2,fill="white")
